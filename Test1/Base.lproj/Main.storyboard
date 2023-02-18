@@ -11,7 +11,7 @@
         <!--Yash Pindiwala Watch List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Test1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,8 +162,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Show Search" id="U3i-Kk-drr"/>
                     <connections>
-                        <outlet property="searchBar" destination="EqL-5B-H8k" id="h7H-Tg-Vhh"/>
-                        <outlet property="tableView" destination="Lxs-FH-QSp" id="fNr-PX-Wdi"/>
+                        <outlet property="searchBar" destination="EqL-5B-H8k" id="j1z-If-5TT"/>
+                        <outlet property="tableView" destination="Lxs-FH-QSp" id="7sI-1g-e7h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHg-jS-2o7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

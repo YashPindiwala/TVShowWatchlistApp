@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate {
     
     var shows = [TVShow]()
     
@@ -15,11 +15,32 @@ class ViewController: UIViewController {
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var tableView: UITableView!
     
+    private lazy var tableDataSource = UITableViewDiffableDataSource<Section, TVShow>(tableView: tableView){
+        tableview, index, show in
+        let cell = tableview.dequeueReusableCell(withIdentifier: "tvShow", for: index) as! TVShowCell
+
+        cell.trackName.text = show.trackName
+        cell.collectionName.text = show.collectionName
+        cell.shortDesc.text = show.shortDescription
+        cell.trackPrice.text = "\(show.trackPrice)"
+
+        return cell
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        searchBar.delegate = self
+        tableView.delegate = self
     }
+    
+    func createDataSnapshot(){
+        var snapshot = NSDiffableDataSourceSnapshot<Section, TVShow>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(shows, toSection: .main)
+        tableDataSource.applySnapshotUsingReloadData(snapshot)
+    }
+    
     
     func createUrl(from: String) -> URL?{
         guard let cleanURL = from.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) else { fatalError("Cannot make URL!.") }
@@ -57,6 +78,9 @@ class ViewController: UIViewController {
                 } catch {
                     print("Problem decoding: \(error.localizedDescription)")
                 }
+                DispatchQueue.main.async {
+                    self.createDataSnapshot()
+                }
             }
         }
         dataTask.resume()
@@ -78,3 +102,13 @@ extension ViewController: UISearchBarDelegate{
     }
 }
 
+//extension ViewController: UITableViewDelegate{
+//    //deselect any selected row
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+//    }
+//}
+
+enum Section {
+    case main
+}

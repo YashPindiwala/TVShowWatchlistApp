@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TVShow: Codable{
+struct TVShow: Codable,Hashable{
     var trackName: String
     var collectionName: String
     var shortDescription: String
