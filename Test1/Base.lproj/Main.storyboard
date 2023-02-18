@@ -82,52 +82,46 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tvShow" id="trd-ll-j6w" customClass="TVShowCell" customModule="Test1" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="86"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="trd-ll-j6w" id="z72-91-bGp">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="86"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="83"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="J7c-h4-n0H">
-                                                    <rect key="frame" x="10" y="0.0" width="373" height="86"/>
+                                                    <rect key="frame" x="10" y="0.0" width="373" height="83"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAX-ym-Hse">
-                                                            <rect key="frame" x="0.0" y="0.0" width="373" height="30"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="30" id="JR7-Ij-5KZ"/>
-                                                            </constraints>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAX-ym-Hse">
+                                                            <rect key="frame" x="0.0" y="0.0" width="373" height="33.666666666666664"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                             <color key="textColor" systemColor="systemRedColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slU-AN-vfQ">
-                                                            <rect key="frame" x="0.0" y="30" width="373" height="20.666666666666671"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slU-AN-vfQ">
+                                                            <rect key="frame" x="0.0" y="33.666666666666664" width="373" height="20.333333333333336"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XQ-vU-Khn">
-                                                            <rect key="frame" x="0.0" y="50.666666666666664" width="373" height="20.666666666666664"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XQ-vU-Khn">
+                                                            <rect key="frame" x="0.0" y="54" width="373" height="14.333333333333329"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ybm-Fc-uhl">
-                                                            <rect key="frame" x="0.0" y="71.333333333333329" width="373" height="14.666666666666671"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ybm-Fc-uhl">
+                                                            <rect key="frame" x="0.0" y="68.333333333333329" width="373" height="14.666666666666671"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                             <color key="textColor" systemColor="systemGray2Color"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="slU-AN-vfQ" firstAttribute="top" secondItem="nAX-ym-Hse" secondAttribute="bottom" id="1rN-Mc-siO"/>
                                                         <constraint firstAttribute="trailing" secondItem="slU-AN-vfQ" secondAttribute="trailing" id="99k-EM-pnX"/>
                                                         <constraint firstItem="nAX-ym-Hse" firstAttribute="top" secondItem="J7c-h4-n0H" secondAttribute="top" id="9WU-cG-D0Q"/>
                                                         <constraint firstAttribute="trailing" secondItem="nAX-ym-Hse" secondAttribute="trailing" id="SRh-wJ-uxM"/>
-                                                        <constraint firstItem="8XQ-vU-Khn" firstAttribute="height" secondItem="nAX-ym-Hse" secondAttribute="height" multiplier="0.688889" id="ctT-Yy-EVZ"/>
                                                         <constraint firstItem="slU-AN-vfQ" firstAttribute="leading" secondItem="J7c-h4-n0H" secondAttribute="leading" id="gVE-6p-5dR"/>
                                                         <constraint firstItem="nAX-ym-Hse" firstAttribute="leading" secondItem="J7c-h4-n0H" secondAttribute="leading" id="ifG-OX-QiC"/>
-                                                        <constraint firstItem="slU-AN-vfQ" firstAttribute="height" secondItem="nAX-ym-Hse" secondAttribute="height" multiplier="0.688889" id="kSl-US-Hvr"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
@@ -139,8 +133,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="collectionName" destination="8XQ-vU-Khn" id="IJI-Ie-Zm6"/>
-                                            <outlet property="shortDesc" destination="slU-AN-vfQ" id="ble-vu-oMF"/>
+                                            <outlet property="collectionName" destination="slU-AN-vfQ" id="xUf-LJ-8ey"/>
+                                            <outlet property="shortDesc" destination="8XQ-vU-Khn" id="d6I-gV-D0x"/>
                                             <outlet property="trackName" destination="nAX-ym-Hse" id="zxe-sv-hoy"/>
                                             <outlet property="trackPrice" destination="Ybm-Fc-uhl" id="KIi-lZ-DkY"/>
                                         </connections>
