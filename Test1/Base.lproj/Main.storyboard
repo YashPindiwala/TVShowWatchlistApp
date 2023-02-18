@@ -65,7 +65,7 @@
         <!--Show Search-->
         <scene sceneID="Yc4-Hl-UE7">
             <objects>
-                <viewController id="e6l-97-18m" sceneMemberID="viewController">
+                <viewController id="e6l-97-18m" customClass="ViewController" customModule="Test1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZJB-58-2ao">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,6 +161,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Show Search" id="U3i-Kk-drr"/>
+                    <connections>
+                        <outlet property="searchBar" destination="EqL-5B-H8k" id="h7H-Tg-Vhh"/>
+                        <outlet property="tableView" destination="Lxs-FH-QSp" id="fNr-PX-Wdi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHg-jS-2o7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
