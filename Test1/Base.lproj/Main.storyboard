@@ -68,8 +68,22 @@
                     <view key="view" contentMode="scaleToFill" id="ZJB-58-2ao">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Enter a tv show name" translatesAutoresizingMaskIntoConstraints="NO" id="EqL-5B-H8k">
+                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="e6l-97-18m" id="2Rj-rw-gQz"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Xd9-ZR-lxT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EqL-5B-H8k" firstAttribute="leading" secondItem="Xd9-ZR-lxT" secondAttribute="leading" id="3Zt-eq-Q9s"/>
+                            <constraint firstItem="EqL-5B-H8k" firstAttribute="trailing" secondItem="Xd9-ZR-lxT" secondAttribute="trailing" id="7FC-9W-1VX"/>
+                            <constraint firstItem="EqL-5B-H8k" firstAttribute="top" secondItem="Xd9-ZR-lxT" secondAttribute="top" id="koP-cn-X5j"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Show Search" id="U3i-Kk-drr"/>
                 </viewController>
