@@ -24,11 +24,11 @@
             </objects>
             <point key="canvasLocation" x="1889.3129770992366" y="3.5211267605633805"/>
         </scene>
-        <!--Item-->
+        <!--Up Next List-->
         <scene sceneID="EPl-kc-0vu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nMQ-5N-MTw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="dkf-YJ-8Le"/>
+                    <tabBarItem key="tabBarItem" title="Up Next List" image="tv.and.hifispeaker.fill" catalog="system" id="dkf-YJ-8Le"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ecw-DQ-pfj">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -77,11 +77,11 @@
             </objects>
             <point key="canvasLocation" x="1889" y="738"/>
         </scene>
-        <!--Item-->
+        <!--TV Lookup-->
         <scene sceneID="j7s-6Q-mSy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kcn-m1-dyh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="W8z-RV-pDy"/>
+                    <tabBarItem key="tabBarItem" title="TV Lookup" image="magnifyingglass" catalog="system" id="W8z-RV-pDy"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="BHA-U7-SVX"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XPi-79-zhr">
@@ -99,6 +99,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="tv.and.hifispeaker.fill" catalog="system" width="128" height="90"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
