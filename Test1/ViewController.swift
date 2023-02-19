@@ -115,7 +115,7 @@ extension ViewController: UITableViewDelegate{
             title = "\(selectedShow.trackName) is already in your watch list"
         }
         let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok", style: .default)
+        let action = UIAlertAction(title: "OK", style: .default)
         ac.addAction(action)
         present(ac, animated: true)
     }
