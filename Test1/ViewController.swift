@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate {
+class ViewController: UIViewController {
     
     var shows = [TVShow]()
     var showStore: ShowStore!
@@ -101,12 +101,25 @@ extension ViewController: UISearchBarDelegate{
     }
 }
 
-//extension ViewController: UITableViewDelegate{
-//    //deselect any selected row
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-//    }
-//}
+extension ViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedShow = shows[indexPath.row]
+        var title: String = ""
+        var message: String = ""
+        
+        if !showStore.watchlist.contains(selectedShow){
+            showStore.watchlist.append(selectedShow)
+                title = "Show Added"
+                message = "\(selectedShow.trackName)"
+        } else {
+            title = "\(selectedShow.trackName) is already in your watch list"
+        }
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default)
+        ac.addAction(action)
+        present(ac, animated: true)
+    }
+}
 
 enum Section {
     case main
