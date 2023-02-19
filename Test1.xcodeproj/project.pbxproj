@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2718066729A179860070E4EA /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2718066629A179860070E4EA /* Show.swift */; };
 		2718066929A17D1F0070E4EA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2718066829A17D1F0070E4EA /* Result.swift */; };
+		271806B029A193590070E4EA /* ShowStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271806AF29A193590070E4EA /* ShowStore.swift */; };
+		271806B229A194CE0070E4EA /* WatchlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271806B129A194CE0070E4EA /* WatchlistViewController.swift */; };
 		277F14DF29A139B800C0F056 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277F14DE29A139B800C0F056 /* AppDelegate.swift */; };
 		277F14E129A139B800C0F056 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277F14E029A139B800C0F056 /* SceneDelegate.swift */; };
 		277F14E329A139B800C0F056 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277F14E229A139B800C0F056 /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 /* Begin PBXFileReference section */
 		2718066629A179860070E4EA /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 		2718066829A17D1F0070E4EA /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		271806AF29A193590070E4EA /* ShowStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowStore.swift; sourceTree = "<group>"; };
+		271806B129A194CE0070E4EA /* WatchlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistViewController.swift; sourceTree = "<group>"; };
 		277F14DB29A139B800C0F056 /* Test1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		277F14DE29A139B800C0F056 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		277F14E029A139B800C0F056 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 			children = (
 				277F14DE29A139B800C0F056 /* AppDelegate.swift */,
 				277F14E029A139B800C0F056 /* SceneDelegate.swift */,
+				271806B129A194CE0070E4EA /* WatchlistViewController.swift */,
+				271806AF29A193590070E4EA /* ShowStore.swift */,
 				277F14E229A139B800C0F056 /* ViewController.swift */,
 				2718066829A17D1F0070E4EA /* Result.swift */,
 				2718066629A179860070E4EA /* Show.swift */,
@@ -149,6 +155,8 @@
 			files = (
 				2718066929A17D1F0070E4EA /* Result.swift in Sources */,
 				277F14E329A139B800C0F056 /* ViewController.swift in Sources */,
+				271806B229A194CE0070E4EA /* WatchlistViewController.swift in Sources */,
+				271806B029A193590070E4EA /* ShowStore.swift in Sources */,
 				277F14DF29A139B800C0F056 /* AppDelegate.swift in Sources */,
 				277F14E129A139B800C0F056 /* SceneDelegate.swift in Sources */,
 				2718066729A179860070E4EA /* Show.swift in Sources */,

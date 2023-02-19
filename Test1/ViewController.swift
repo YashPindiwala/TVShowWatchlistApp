@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate {
     
     var shows = [TVShow]()
+    var showStore: ShowStore!
     
     //MARK: - Outlets
     @IBOutlet var searchBar: UISearchBar!
@@ -48,8 +49,6 @@ class ViewController: UIViewController, UITableViewDelegate {
         var urlString = "https://itunes.apple.com/search"
         urlString = urlString.appending("?term=\(cleanURL)")
         urlString = urlString.appending("&media=tvShow")
-        
-        print(urlString)
         
         return URL(string: urlString)
     }
