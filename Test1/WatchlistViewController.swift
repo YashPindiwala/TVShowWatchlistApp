@@ -10,6 +10,7 @@ import UIKit
 class WatchlistViewController: UIViewController {
     var showStore: ShowStore!
     @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var totalShows: UILabel!
     
     private lazy var collectionDataSource = UICollectionViewDiffableDataSource<Section,TVShow>(collectionView: collectionView){
         collection, indexPath, show in
@@ -43,6 +44,7 @@ class WatchlistViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        totalShows.text = "Total tv shows: \(showStore.watchlist.count)"
         loadSnapshot()
     }
     
