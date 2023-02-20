@@ -19,6 +19,7 @@
 		277F14E829A139B900C0F056 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 277F14E729A139B900C0F056 /* Assets.xcassets */; };
 		277F14EB29A139B900C0F056 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 277F14E929A139B900C0F056 /* LaunchScreen.storyboard */; };
 		277F14F729A1482700C0F056 /* CustomTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277F14F629A1482700C0F056 /* CustomTableCell.swift */; };
+		27B46E4129A4385800BCBECF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B46E4029A4385800BCBECF /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		277F14EA29A139B900C0F056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		277F14EC29A139B900C0F056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		277F14F629A1482700C0F056 /* CustomTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableCell.swift; sourceTree = "<group>"; };
+		27B46E4029A4385800BCBECF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				2718066829A17D1F0070E4EA /* Result.swift */,
 				2718066629A179860070E4EA /* Show.swift */,
 				277F14E429A139B800C0F056 /* Main.storyboard */,
+				27B46E4029A4385800BCBECF /* DetailViewController.swift */,
 				271806B529A29D7E0070E4EA /* CollectionViewCell.swift */,
 				277F14F629A1482700C0F056 /* CustomTableCell.swift */,
 				277F14E729A139B900C0F056 /* Assets.xcassets */,
@@ -163,6 +166,7 @@
 				271806B029A193590070E4EA /* ShowStore.swift in Sources */,
 				277F14DF29A139B800C0F056 /* AppDelegate.swift in Sources */,
 				277F14E129A139B800C0F056 /* SceneDelegate.swift in Sources */,
+				27B46E4129A4385800BCBECF /* DetailViewController.swift in Sources */,
 				2718066729A179860070E4EA /* Show.swift in Sources */,
 				277F14F729A1482700C0F056 /* CustomTableCell.swift in Sources */,
 			);

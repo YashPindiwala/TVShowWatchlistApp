@@ -131,10 +131,10 @@
             </objects>
             <point key="canvasLocation" x="1889.3129770992366" y="3.5211267605633805"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="mNy-pL-vOX">
             <objects>
-                <viewController id="KRa-nY-LaU" sceneMemberID="viewController">
+                <viewController id="KRa-nY-LaU" customClass="DetailViewController" customModule="Test1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Mf-C8-bFT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -228,6 +228,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QRc-ht-jEp"/>
+                    <connections>
+                        <outlet property="advisoryRating" destination="cA5-f7-Huy" id="hXx-es-4lS"/>
+                        <outlet property="collectionName" destination="wQR-bR-ceY" id="0Or-HK-AJc"/>
+                        <outlet property="collectionPrice" destination="pRn-IA-Lnz" id="YKx-0F-gpR"/>
+                        <outlet property="longDescription" destination="7pa-LC-LhD" id="2AG-Uy-dgd"/>
+                        <outlet property="trackImage" destination="WcB-YD-PyF" id="RLi-tT-37N"/>
+                        <outlet property="trackName" destination="zrT-4n-DnO" id="Cqg-1t-0m9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6fn-af-luB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
