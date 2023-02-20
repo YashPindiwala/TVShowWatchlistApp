@@ -36,6 +36,9 @@ class WatchlistViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let width = (self.view.frame.width - 30) / 4
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: width, height: width)
     }
     
     override func viewWillAppear(_ animated: Bool) {
