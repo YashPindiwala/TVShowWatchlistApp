@@ -18,6 +18,9 @@ class WatchlistViewController: UIViewController {
         
         cell.shortDesc.text = self.showStore.watchlist[indexPath.item].shortDescription
         cell.advisoryRating.text = self.showStore.watchlist[indexPath.item].contentAdvisoryRating
+        if (self.showStore.watchlist[indexPath.item].contentAdvisoryRating == "TV-MA"){
+            cell.image.image = UIImage(systemName: "person.crop.circle.fill.badge.xmark")
+        }
         
         return cell
     }
