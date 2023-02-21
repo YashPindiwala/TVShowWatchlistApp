@@ -49,6 +49,12 @@ class WatchlistViewController: UIViewController {
         loadSnapshot()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let selectedIndex = self.collectionView.indexPathsForSelectedItems?.first else {return}
+        let selectedShow = collectionDataSource.itemIdentifier(for: selectedIndex)
+        let destinationVC = segue.destination as! DetailViewController
+        destinationVC.selectedShow = selectedShow
+    }
 
     /*
     // MARK: - Navigation

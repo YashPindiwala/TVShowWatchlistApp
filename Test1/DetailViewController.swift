@@ -9,6 +9,9 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    //MARK: - Property
+    var selectedShow: TVShow!
+    
     //MARK: - Outlets
     
     @IBOutlet var trackName: UILabel!
@@ -16,12 +19,18 @@ class DetailViewController: UIViewController {
     @IBOutlet var advisoryRating: UILabel!
     @IBOutlet var collectionPrice: UILabel!
     @IBOutlet var trackImage: UIImageView!
-    @IBOutlet var longDescription: UILabel!
+    @IBOutlet var longDescription: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        guard let selectedShow = selectedShow else { return }
+        trackName.text = selectedShow.trackName
+        collectionName.text = selectedShow.collectionName
+        advisoryRating.text = selectedShow.contentAdvisoryRating
+        collectionPrice.text = "\(selectedShow.collectionPrice)"
+        longDescription.text = selectedShow.longDescription
     }
     
 

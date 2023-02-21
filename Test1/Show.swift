@@ -11,7 +11,9 @@ struct TVShow: Codable,Hashable{
     var trackName: String
     var collectionName: String
     var shortDescription: String
+    var longDescription: String
     var trackPrice: Double
+    var collectionPrice: Double
     var contentAdvisoryRating: String
     var artworkUrl100: String
 }
