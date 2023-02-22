@@ -12,5 +12,6 @@ class WatchlistCell: UICollectionViewCell{
     @IBOutlet var advisoryRating: UILabel!
     @IBOutlet var shortDesc: UILabel!
     @IBOutlet var image: UIImageView!
+    @IBOutlet var showImage: UIImageView!
     
 }

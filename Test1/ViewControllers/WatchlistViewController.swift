@@ -23,6 +23,8 @@ class WatchlistViewController: UIViewController {
         if (self.showStore.watchlist[indexPath.item].contentAdvisoryRating == "TV-MA"){
             cell.image.image = UIImage(systemName: "person.crop.circle.fill.badge.xmark")
         }
+        let showImageURL = self.showStore.watchlist[indexPath.item].artworkUrl100
+        self.fetchImage(for: showImageURL, in: cell)        
         
         return cell
     }
@@ -58,6 +60,26 @@ class WatchlistViewController: UIViewController {
         destinationVC.selectedShow = selectedShow
     }
 
-   
+    func fetchImage(for path: String, in cell: WatchlistCell){
+        
+        let posterPath = path
+
+        guard let imageUrl = URL(string: posterPath) else {
+            return
+        }
+
+        let imageFetchTask = URLSession.shared.downloadTask(with: imageUrl){
+            url, response, error in
+
+            if error == nil, let url = url, let data = try? Data(contentsOf: url), let image = UIImage(data: data){
+                DispatchQueue.main.async {
+                    //TODO: - add this to the collectionview cell
+                    cell.showImage.image = image
+                }
+            }
+        }
+
+        imageFetchTask.resume()
+    }
 
 }

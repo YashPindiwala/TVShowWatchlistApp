@@ -57,7 +57,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoShow" translatesAutoresizingMaskIntoConstraints="NO" id="i2z-Ek-N84">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                 </imageView>
-                                                <stackView opaque="NO" alpha="0.75" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wLJ-v4-yMr">
+                                                <stackView opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wLJ-v4-yMr">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdH-dh-otp">
@@ -103,6 +103,7 @@
                                             <outlet property="advisoryRating" destination="FdH-dh-otp" id="9dG-Zi-Un5"/>
                                             <outlet property="image" destination="v5w-NU-NTt" id="Swt-H2-YqC"/>
                                             <outlet property="shortDesc" destination="u0b-Vl-ZI9" id="e4C-0a-duX"/>
+                                            <outlet property="showImage" destination="i2z-Ek-N84" id="IHY-GV-iOF"/>
                                             <segue destination="KRa-nY-LaU" kind="show" id="j8O-hF-Hvo"/>
                                         </connections>
                                     </collectionViewCell>
