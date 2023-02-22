@@ -61,10 +61,8 @@ class WatchlistViewController: UIViewController {
     }
 
     func fetchImage(for path: String, in cell: WatchlistCell){
-        
-        let posterPath = path
 
-        guard let imageUrl = URL(string: posterPath) else {
+        guard let imageUrl = URL(string: path) else {
             return
         }
 
@@ -72,8 +70,7 @@ class WatchlistViewController: UIViewController {
             url, response, error in
 
             if error == nil, let url = url, let data = try? Data(contentsOf: url), let image = UIImage(data: data){
-                DispatchQueue.main.async {
-                    //TODO: - add this to the collectionview cell
+                DispatchQueue.main.async {                    
                     cell.showImage.image = image
                 }
             }

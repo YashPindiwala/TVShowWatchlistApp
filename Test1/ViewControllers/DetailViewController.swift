@@ -31,6 +31,25 @@ class DetailViewController: UIViewController {
         advisoryRating.text = selectedShow.contentAdvisoryRating
         collectionPrice.text = "\(selectedShow.collectionPrice)"
         longDescription.text = selectedShow.longDescription
+        loadImage()
+        
+    }
+    
+    func loadImage(){
+        guard let imageUrl = URL(string: selectedShow.artworkUrl100) else {
+            return
+        }
+        let imageFetchTask = URLSession.shared.downloadTask(with: imageUrl){
+            url, response, error in
+
+            if error == nil, let url = url, let data = try? Data(contentsOf: url), let image = UIImage(data: data){
+                DispatchQueue.main.async {
+                    self.trackImage.image = image
+                }
+            }
+        }
+
+        imageFetchTask.resume()
     }
     
 
