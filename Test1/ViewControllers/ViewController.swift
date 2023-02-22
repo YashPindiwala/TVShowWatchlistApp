@@ -111,6 +111,7 @@ extension ViewController: UITableViewDelegate{
             showStore.watchlist.append(selectedShow)
                 title = "Show Added"
                 message = "\(selectedShow.trackName)"
+                showStore.saveToWatchlist()
         } else {
             title = "\(selectedShow.trackName) is already in your watch list"
         }

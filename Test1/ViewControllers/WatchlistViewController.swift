@@ -41,6 +41,8 @@ class WatchlistViewController: UIViewController {
         let width = (self.view.frame.width - 30) / 4
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: width, height: width)
+        
+        showStore.retrieveWatchlist()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,14 +58,6 @@ class WatchlistViewController: UIViewController {
         destinationVC.selectedShow = selectedShow
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }
