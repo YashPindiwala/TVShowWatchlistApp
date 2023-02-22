@@ -58,6 +58,7 @@ class WatchlistViewController: UIViewController {
         let selectedShow = collectionDataSource.itemIdentifier(for: selectedIndex)
         let destinationVC = segue.destination as! DetailViewController
         destinationVC.selectedShow = selectedShow
+        destinationVC.showStore = showStore
     }
 
     func fetchImage(for path: String, in cell: WatchlistCell){
@@ -70,7 +71,7 @@ class WatchlistViewController: UIViewController {
             url, response, error in
 
             if error == nil, let url = url, let data = try? Data(contentsOf: url), let image = UIImage(data: data){
-                DispatchQueue.main.async {                    
+                DispatchQueue.main.async {
                     cell.showImage.image = image
                 }
             }

@@ -11,6 +11,7 @@ class DetailViewController: UIViewController {
     
     //MARK: - Property
     var selectedShow: TVShow!
+    var showStore = ShowStore()
     
     //MARK: - Outlets
     
@@ -20,6 +21,25 @@ class DetailViewController: UIViewController {
     @IBOutlet var collectionPrice: UILabel!
     @IBOutlet var trackImage: UIImageView!
     @IBOutlet var longDescription: UITextView!
+    
+    //MARK: - Action
+    
+    @IBAction func deleteShow(_ sender: UIBarButtonItem) {
+        let message = "Do you want to remove \(selectedShow.trackName)"
+        let ac = UIAlertController(title: "Delete TV Show?", message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive){
+            [weak self] _ in
+            guard let showToRemove = self?.selectedShow else { return }
+            self?.showStore.removeShow(show: showToRemove)
+            self?.navigationController?.popViewController(animated: true)
+        }
+        ac.addAction(cancelAction)
+        ac.addAction(deleteAction)
+        present(ac, animated: true)        
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +55,8 @@ class DetailViewController: UIViewController {
         
     }
     
+    
+
     func loadImage(){
         guard let imageUrl = URL(string: selectedShow.artworkUrl100) else {
             return

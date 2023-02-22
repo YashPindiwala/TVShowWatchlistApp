@@ -12,7 +12,6 @@ class ShowStore{
     
     var documentDirectory: URL?{
         let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        print(path[0])
         return path[0]
     }
     

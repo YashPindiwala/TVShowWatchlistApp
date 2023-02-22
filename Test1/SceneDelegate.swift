@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
               let secondTabNav = rootvc.viewControllers?[1] as? UINavigationController,
               let watchlistVC = firstTabNav.viewControllers[0] as? WatchlistViewController,
               let searchVC = secondTabNav.viewControllers[0] as? ViewController else { return }
-        
+                
         watchlistVC.showStore = showStore
         searchVC.showStore = showStore
     }

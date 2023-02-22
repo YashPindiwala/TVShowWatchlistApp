@@ -144,7 +144,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lf3-up-egW">
                                 <rect key="frame" x="10" y="103" width="373" height="666"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="M13-6S-7VF">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="M13-6S-7VF">
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="666"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrT-4n-DnO">
@@ -155,25 +155,25 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="MR4-sP-LqR">
-                                                <rect key="frame" x="0.0" y="33.666666666666657" width="373" height="100"/>
+                                                <rect key="frame" x="0.0" y="43.666666666666657" width="373" height="100"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HXT-vR-UMF">
                                                         <rect key="frame" x="0.0" y="0.0" width="268" height="100"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQR-bR-ceY">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQR-bR-ceY">
                                                                 <rect key="frame" x="0.0" y="0.0" width="268" height="24"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cA5-f7-Huy">
-                                                                <rect key="frame" x="0.0" y="23.999999999999996" width="268" height="62.666666666666657"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cA5-f7-Huy">
+                                                                <rect key="frame" x="0.0" y="24" width="268" height="14.333333333333336"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRn-IA-Lnz">
-                                                                <rect key="frame" x="0.0" y="86.666666666666686" width="268" height="13.333333333333329"/>
+                                                                <rect key="frame" x="0.0" y="38.333333333333343" width="268" height="61.666666666666657"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -190,7 +190,7 @@
                                                 </subviews>
                                             </stackView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OF8-Mx-hg7">
-                                                <rect key="frame" x="0.0" y="133.66666666666669" width="373" height="532.33333333333326"/>
+                                                <rect key="frame" x="0.0" y="153.66666666666669" width="373" height="512.33333333333326"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" systemColor="labelColor"/>
@@ -230,7 +230,13 @@
                             <constraint firstItem="Lf3-up-egW" firstAttribute="leading" secondItem="NLK-32-4ej" secondAttribute="leading" constant="10" id="e7i-uP-wcZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="QRc-ht-jEp"/>
+                    <navigationItem key="navigationItem" id="QRc-ht-jEp">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="trash" catalog="system" id="RSh-R6-8Gm">
+                            <connections>
+                                <action selector="deleteShow:" destination="KRa-nY-LaU" id="EdO-wB-xRh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="advisoryRating" destination="cA5-f7-Huy" id="hXx-es-4lS"/>
                         <outlet property="collectionName" destination="wQR-bR-ceY" id="0Or-HK-AJc"/>
@@ -403,6 +409,7 @@
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="person.crop.circle.fill.badge.checkmark" catalog="system" width="128" height="114"/>
         <image name="sparkles.tv" catalog="system" width="128" height="95"/>
+        <image name="trash" catalog="system" width="117" height="128"/>
         <image name="tv.and.hifispeaker.fill" catalog="system" width="128" height="90"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
