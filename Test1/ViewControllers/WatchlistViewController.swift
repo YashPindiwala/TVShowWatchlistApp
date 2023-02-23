@@ -8,10 +8,14 @@
 import UIKit
 
 class WatchlistViewController: UIViewController {
+    //MARK: - Properties
     var showStore: ShowStore!
+    
+    //MARK: - Outlets
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var totalShows: UILabel!
     
+    // datasource for the collection-view
     private lazy var collectionDataSource = UICollectionViewDiffableDataSource<Section,TVShow>(collectionView: collectionView){
         collection, indexPath, show in
         
@@ -29,7 +33,7 @@ class WatchlistViewController: UIViewController {
         return cell
     }
     
-    
+    //MARK: - Methods
     func loadSnapshot(){
         var snapshot = NSDiffableDataSourceSnapshot<Section,TVShow>()
         snapshot.appendSections([.main])
@@ -39,12 +43,12 @@ class WatchlistViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // setting 4 cells in row
         let width = (self.view.frame.width - 30) / 4
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: width, height: width)
         
-        showStore.retrieveWatchlist()
+        showStore.retrieveWatchlist() // if the watchlist is available then load the shows
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,10 +61,11 @@ class WatchlistViewController: UIViewController {
         guard let selectedIndex = self.collectionView.indexPathsForSelectedItems?.first else {return}
         let selectedShow = collectionDataSource.itemIdentifier(for: selectedIndex)
         let destinationVC = segue.destination as! DetailViewController
-        destinationVC.selectedShow = selectedShow
-        destinationVC.showStore = showStore
+        destinationVC.selectedShow = selectedShow // sending data to show on detail screen
+        destinationVC.showStore = showStore // sending the reference so it can be deleted from the detail screen
     }
 
+    // the method below will fetch image from the server
     func fetchImage(for path: String, in cell: WatchlistCell){
 
         guard let imageUrl = URL(string: path) else {

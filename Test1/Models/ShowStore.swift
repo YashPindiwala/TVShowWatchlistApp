@@ -9,6 +9,7 @@ import Foundation
 
 class ShowStore{
     var watchlist = [TVShow]()
+    private var watchlistFile = "watchlist.json"
     
     var documentDirectory: URL?{
         let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -23,7 +24,7 @@ class ShowStore{
     
     func saveToWatchlist(){
         guard let documentDirectory = documentDirectory else { return }
-        let fileName = documentDirectory.appendingPathComponent("watchlist.json")
+        let fileName = documentDirectory.appendingPathComponent(watchlistFile)
         save(to: fileName)
     }
     
@@ -40,7 +41,7 @@ class ShowStore{
     
     func retrieveWatchlist(){
         guard let documentDirectory = documentDirectory else { return }
-        let fileName = documentDirectory.appendingPathComponent("watchlist.json")
+        let fileName = documentDirectory.appendingPathComponent(watchlistFile)
         retrieve(from: fileName)
     }
     

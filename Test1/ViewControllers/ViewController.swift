@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //MARK: - Properties
     var shows = [TVShow]()
     var showStore: ShowStore!
     
@@ -16,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var tableView: UITableView!
     
+    // datasource for the table-view
     private lazy var tableDataSource = UITableViewDiffableDataSource<Section, TVShow>(tableView: tableView){
         tableview, index, show in
         let cell = tableview.dequeueReusableCell(withIdentifier: "tvShow", for: index) as! TVShowCell
@@ -23,7 +25,7 @@ class ViewController: UIViewController {
         cell.trackName.text = show.trackName
         cell.collectionName.text = show.collectionName
         cell.shortDesc.text = show.shortDescription
-        cell.trackPrice.text = "\(show.trackPrice)"
+        cell.trackPrice.text = "$\(show.trackPrice)"
 
         return cell
     }
@@ -35,6 +37,7 @@ class ViewController: UIViewController {
         tableView.delegate = self
     }
     
+    //MARK: - Methods
     func createDataSnapshot(){
         var snapshot = NSDiffableDataSourceSnapshot<Section, TVShow>()
         snapshot.appendSections([.main])
@@ -42,7 +45,7 @@ class ViewController: UIViewController {
         tableDataSource.applySnapshotUsingReloadData(snapshot)
     }
     
-    
+    // this method will create the URL with search term
     func createUrl(from: String) -> URL?{
         guard let cleanURL = from.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) else { fatalError("Cannot make URL!.") }
         
@@ -53,6 +56,7 @@ class ViewController: UIViewController {
         return URL(string: urlString)
     }
     
+    // the method below will fetch the shows from the server asynchronously
     func fetchShows(from: URL){
         let dataTask = URLSession.shared.dataTask(with: from){
             data, response, error in
@@ -65,10 +69,10 @@ class ViewController: UIViewController {
                     let result = try jsonDecoder.decode(Result.self, from: someData)
                     self.shows = result.results
                 } catch DecodingError.keyNotFound(let key, let context){
-                    //you asked for a key that does not exist
+                    //key that does not exist
                     print("Decoding Error - missing key [\(key)] - for context: \(context)")
                 }catch DecodingError.typeMismatch(let type, let context){
-                    //you asked to match one type (i.e. Int) and got back something different (i.e. String)
+                    //type doesnot math to the class properties
                     print("Decoding Error - type does not match [\(type)] - for context:\(context)" )
                 }
                 catch DecodingError.valueNotFound(let value, let context){
@@ -86,6 +90,8 @@ class ViewController: UIViewController {
     }
 
 }
+
+//MARK: - Extensions
 extension ViewController: UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         //make sure there is some text - if not just return
@@ -102,12 +108,13 @@ extension ViewController: UISearchBarDelegate{
 }
 
 extension ViewController: UITableViewDelegate{
+    // the method below will add the show to the watchlist
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedShow = shows[indexPath.row]
         var title: String = ""
         var message: String = ""
         
-        if !showStore.watchlist.contains(selectedShow){
+        if !showStore.watchlist.contains(selectedShow){// if the watchlist already has the show it will not add to the watchlist and will notify user
             showStore.watchlist.append(selectedShow)
                 title = "Show Added"
                 message = "\(selectedShow.trackName)"
